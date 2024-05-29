@@ -12,12 +12,12 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Produk</h3>
                 <a href="{{ route('admin.products.index')}}" class="btn btn-success shadow-sm float-right"> <i class="fa fa-arrow-left"></i> Kembali</a>
-                <a href="{{ route('admin.products.product_images.index', $product)}}" class="btn btn-success shadow-sm mr-2 float-right"> <i class="fa fa-image"></i> Upload Gambar Produk</a>
+                <a href="{{ route('admin.products.product_images.index', $product)}}" class="btn btn-success shadow-sm mr-2 float-right"> <i class="fa fa-image"></i> Mengunggah Gambar Produk</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <form method="post" action="{{ route('admin.products.update', $product) }}">
-                    @csrf 
+                    @csrf
                     @method('put')
                     <div class="form-group row border-bottom pb-4">
                         <label for="type" class="col-sm-2 col-form-label">Tipe Kategori</label>
@@ -73,7 +73,7 @@
                         @if ($product->type == 'configurable')
                             @include('admin.products.configurable')
                         @else
-                            @include('admin.products.simple')                            
+                            @include('admin.products.simple')
                         @endif
 
                         <div class="form-group row border-bottom pb-4">
@@ -99,7 +99,7 @@
                             </div>
                         </div>
                     @endif
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
                 </form>
               </div>
               <!-- /.card-body -->

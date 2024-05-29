@@ -71,7 +71,7 @@
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
                     <p>
-                        Managemen Order
+                        Managemen Pesanan
                         <i class="fas fa-angle-left right"></i>
                     </p>
                 </a>
@@ -79,7 +79,7 @@
                     <li class="nav-item">
                         <a href="{{ route('admin.orders.index') }}" class="nav-link">
                             <i class="fa fa-plus nav-icon"></i>
-                            <p>Order</p>
+                            <p>Pesanan</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -94,7 +94,7 @@
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
                     <p>
-                        Managemen Report
+                        Managemen laporan
                         <i class="fas fa-angle-left right"></i>
                     </p>
                 </a>
@@ -102,7 +102,7 @@
                     <li class="nav-item">
                         <a href="{{ route('admin.reports.revenue') }}" class="nav-link">
                             <i class="fa fa-plus nav-icon"></i>
-                            <p>Keuntungan</p>
+                            <p>Penjualan</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -120,7 +120,7 @@
                     <li class="nav-item">
                         <a href="{{ route('admin.reports.payment') }}" class="nav-link">
                             <i class="fa fa-plus nav-icon"></i>
-                            <p>Payment</p>
+                            <p>Pembayaran</p>
                         </a>
                     </li>
                 </ul>

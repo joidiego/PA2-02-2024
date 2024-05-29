@@ -1,4 +1,4 @@
-<p class="text-primary mt-4">Product Variants</p>
+<p class="text-primary mt-4">Varian Produk</p>
 <hr/>
  @foreach ($product->variants as $variant)
     <div class="row">

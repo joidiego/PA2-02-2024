@@ -21,55 +21,55 @@ class SlideController extends Controller
     }
 
     public function moveUp($id)
-	{
-		$slide = Slide::findOrFail($id);
+    {
+        $slide = Slide::findOrFail($id);
 
-		if (!$slide->prevSlide()) {
-			return redirect('admin/slides');
-		}
+        if (!$slide->prevSlide()) {
+            return redirect('admin/slides');
+        }
 
-		\DB::transaction(
-			function () use ($slide) {
-				$currentPosition = $slide->position;
-				$prevPosition = $slide->prevSlide()->position;
+        \DB::transaction(
+            function () use ($slide) {
+                $currentPosition = $slide->position;
+                $prevPosition = $slide->prevSlide()->position;
 
-				$prevSlide = Slide::find($slide->prevSlide()->id);
-				$prevSlide->position = $currentPosition;
-				$prevSlide->save();
+                $prevSlide = Slide::find($slide->prevSlide()->id);
+                $prevSlide->position = $currentPosition;
+                $prevSlide->save();
 
-				$slide->position = $prevPosition;
-				$slide->save();
-			}
-		);
+                $slide->position = $prevPosition;
+                $slide->save();
+            }
+        );
 
-		return redirect('admin/slides');
+        return redirect('admin/slides');
     }
 
     public function moveDown($id)
-	{
-		$slide = Slide::findOrFail($id);
+    {
+        $slide = Slide::findOrFail($id);
 
-		if (!$slide->nextSlide()) {
-			\Session::flash('error', 'Invalid position');
-			return redirect('admin/slides');
-		}
+        if (!$slide->nextSlide()) {
+            \Session::flash('error', 'Invalid position');
+            return redirect('admin/slides');
+        }
 
-		\DB::transaction(
-			function () use ($slide) {
-				$currentPosition = $slide->position;
-				$nextPosition = $slide->nextSlide()->position;
+        \DB::transaction(
+            function () use ($slide) {
+                $currentPosition = $slide->position;
+                $nextPosition = $slide->nextSlide()->position;
 
-				$nextSlide = Slide::find($slide->nextSlide()->id);
-				$nextSlide->position = $currentPosition;
-				$nextSlide->save();
+                $nextSlide = Slide::find($slide->nextSlide()->id);
+                $nextSlide->position = $currentPosition;
+                $nextSlide->save();
 
-				$slide->position = $nextPosition;
-				$slide->save();
-			}
-		);
+                $slide->position = $nextPosition;
+                $slide->save();
+            }
+        );
 
-		return redirect('admin/slides');
-	}
+        return redirect('admin/slides');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -87,12 +87,12 @@ class SlideController extends Controller
     public function store(SlideRequest $request)
     {
 
-        if($request->validated()){
+        if ($request->validated()) {
             $image = $request->file('path')->store('assets/slides', 'public');
-            Slide::create($request->except('path') + ['path' => $image,'position' => Slide::max('position') + 1, 'user_id' => auth()->id()]);
+            Slide::create($request->except('path') + ['path' => $image, 'position' => Slide::max('position') + 1, 'user_id' => auth()->id()]);
         }
 
-		return redirect('admin/slides')->with([
+        return redirect('admin/slides')->with([
             'message' => 'berhasil di tambah !',
             'alert-type' => 'success'
         ]);
@@ -113,7 +113,7 @@ class SlideController extends Controller
     {
         $statuses = Slide::STATUSES;
 
-		return view('admin.slides.edit', compact('slide', 'statuses'));
+        return view('admin.slides.edit', compact('slide', 'statuses'));
     }
 
     /**
@@ -121,17 +121,17 @@ class SlideController extends Controller
      */
     public function update(SlideRequest $request, Slide $slide)
     {
-        if($request->validated()) {
-            if($request->path){
-                File::delete('storage/'. $slide->path);
+        if ($request->validated()) {
+            if ($request->path) {
+                File::delete('storage/' . $slide->path);
                 $image = $request->file('path')->store('assets/slides', 'public');
-                $slide->update($request->except('path') + ['path' => $image,'position' => Slide::max('position') + 1, 'user_id' => auth()->id()]);
-            }else {
+                $slide->update($request->except('path') + ['path' => $image, 'position' => Slide::max('position') + 1, 'user_id' => auth()->id()]);
+            } else {
                 $slide->update($request->validated() + ['position' => Slide::max('position') + 1, 'user_id' => auth()->id()]);
             }
         }
 
-		return redirect('admin/slides')->with([
+        return redirect('admin/slides')->with([
             'message' => 'berhasil di edit !',
             'alert-type' => 'info'
         ]);

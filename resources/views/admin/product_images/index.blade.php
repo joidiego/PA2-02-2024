@@ -12,7 +12,7 @@
               <div class="card-header">
                 <h3 class="card-title">Data Gambar Produk</h3>
                 <a href="{{ route('admin.products.edit', $product)}}" class="btn btn-success shadow-sm float-right"> <i class="fa fa-arrow-left"></i> Kembali </a>
-                <a href="{{ route('admin.products.product_images.create', $product)}}" class="btn btn-success shadow-sm float-right mr-2"> <i class="fa fa-upload"></i> Upload </a>
+                <a href="{{ route('admin.products.product_images.create', $product)}}" class="btn btn-success shadow-sm float-right mr-2"> <i class="fa fa-upload"></i> Unggah </a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -71,7 +71,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

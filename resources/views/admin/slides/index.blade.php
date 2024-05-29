@@ -20,16 +20,16 @@
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Title</th>
-                        <th>Image</th>
-                        <th>Position</th>
+                        <th>Judul Produk</th>
+                        <th>Gambar</th>
+                        <th>Posisi</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                         @forelse ($slides as $slide)
-                            <tr>    
+                            <tr>
                                 <td>{{ $slide->id }}</td>
                                 <td>{{ $slide->title }}</td>
                                 <td><img width="200" src="{{ Storage::url($slide->path) }}" /></td>
@@ -39,7 +39,7 @@
                                     @else
                                         up
                                     @endif
-                                        | 
+                                        |
                                     @if ($slide->nextSlide())
                                         <a href="{{ url('admin/slides/'. $slide->id .'/down') }}">down</a>
                                     @else
@@ -63,7 +63,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="6">No records found</td>
+                                <td colspan="6">Tidak ada catatan yang ditemukan</td>
                             </tr>
                         @endforelse
                     </tbody>
@@ -88,7 +88,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

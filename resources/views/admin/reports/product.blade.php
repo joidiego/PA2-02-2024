@@ -6,7 +6,7 @@
 			<div class="col-lg-12">
 				<div class="card card-default">
 					<div class="card-header card-header-border-bottom">
-						<h2>Product Report</h2>
+						<h2>Laporan Produk</h2>
 					</div>
 					<div class="card-body">
 						@include('admin.reports.filter')
@@ -24,7 +24,7 @@
 									$totalNetRevenue = 0;
 								@endphp
 								@forelse ($products as $product)
-									<tr>    
+									<tr>
 										<td>{{ $product->name }}</td>
 										<td>{{ $product->sku }}</td>
 										<td>{{ $product->items_sold }}</td>
@@ -32,7 +32,7 @@
 										<td>{{ $product->num_of_orders }}</td>
 										<td>{{ $product->stock }}</td>
 									</tr>
-									
+
 									@php
 										$totalNetRevenue += $product->net_revenue;
 									@endphp
@@ -67,7 +67,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
  @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
@@ -75,7 +75,7 @@
     >
     </script>
     <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $("#data-table").DataTable();

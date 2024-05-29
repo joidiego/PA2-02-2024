@@ -10,7 +10,7 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data Order</h3>
+                <h3 class="card-title">Data Pesanan</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -18,7 +18,7 @@
                 <table id="data-table" class="table table-bordered table-striped">
                             <thead>
                                 <th>Order ID</th>
-                                <th>Name</th>
+                                <th>Nama</th>
                                 <th>Status</th>
                                 <th>Total Qty</th>
                                 <th>Total Weight (gram)</th>
@@ -26,7 +26,7 @@
                             </thead>
                             <tbody>
                                 @forelse ($shipments as $shipment)
-                                    <tr>    
+                                    <tr>
                                         <td>
                                             {{ $shipment->order->code }}<br>
                                             <span style="font-size: 12px; font-weight: normal"> {{ $shipment->order->order_date }}</span>
@@ -40,12 +40,12 @@
                                         <td>{{ $shipment->total_qty }}</td>
                                         <td>{{ $shipment->total_weight }}</td>
                                         <td>
-                                            <a href="{{ url('admin/orders/'. $shipment->order->id) }}" class="btn btn-info btn-sm">show</a>      
+                                            <a href="{{ url('admin/orders/'. $shipment->order->id) }}" class="btn btn-info btn-sm">show</a>
                                         </td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="6">No records found</td>
+                                        <td colspan="6">Tidak ada catatan yang ditemukan</td>
                                     </tr>
                                 @endforelse
                             </tbody>
@@ -70,7 +70,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

@@ -6,7 +6,7 @@
 			<div class="col-lg-12">
 				<div class="card card-default">
 					<div class="card-header card-header-border-bottom">
-						<h2>Inventory Report</h2>
+						<h2>Laporan Inventaris</h2>
 					</div>
 					<div class="card-body">
                         <form action="{{ url()->current() }}" method="get" class="form-inline">
@@ -17,7 +17,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        
+
 							<div class="form-group mx-sm-3 mb-2">
 								<button type="submit" class="btn btn-success">Go</button>
 							</div>
@@ -30,7 +30,7 @@
 							</thead>
 							<tbody>
 								@forelse ($products as $product)
-									<tr>    
+									<tr>
 										<td>{{ $product->name }}</td>
 										<td>{{ $product->sku }}</td>
 										<td>{{ $product->stock }}</td>
@@ -54,7 +54,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

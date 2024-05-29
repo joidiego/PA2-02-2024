@@ -10,20 +10,20 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Upload Gambar Produk</h3>
+                <h3 class="card-title">Unggah Gambar Produk</h3>
                 <a href="{{ route('admin.products.product_images.index', $product)}}" class="btn btn-success shadow-sm float-right"> <i class="fa fa-arrow-left"></i> Kembali</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <form method="post" action="{{ route('admin.products.product_images.store', $product) }}" enctype="multipart/form-data">
-                    @csrf 
+                    @csrf
                     <div class="form-group row border-bottom pb-4">
                         <label for="path" class="col-sm-2 col-form-label">Path</label>
                         <div class="col-sm-10">
                           <input type="file" class="form-control" name="path" value="{{ old('path') }}" id="path">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
                 </form>
               </div>
               <!-- /.card-body -->

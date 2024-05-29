@@ -30,7 +30,7 @@
                                             <input type="hidden" id="productMinPrice" value="{{ $minPrice }}"/>
                                             <input type="hidden" id="productMaxPrice" value="{{ $maxPrice }}"/>
                                         </div>
-                                        <button type="submit">Filter</button> 
+                                        <button type="submit">Filter</button>
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
 
                         @if ($categories)
                             <div class="sidebar-widget mb-45">
-                                <h3 class="sidebar-title">Categories</h3>
+                                <h3 class="sidebar-title">Kategori</h3>
                                 <div class="sidebar-categories">
                                     <ul>
                                         @foreach ($categories as $category)
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                         @endif
-                        
+
                         @if ($colors)
                             <div class="sidebar-widget sidebar-overflow mb-45">
                                 <h3 class="sidebar-title">color</h3>
@@ -83,7 +83,7 @@
 							<div class="shop-bar pb-60">
 								<div class="shop-found-selector">
 									<div class="shop-found">
-										<p><span>{{ count($products) }}</span> Product Found of <span>{{ $products->total() }}</span></p>
+										<p><span>{{ count($products) }}</span> Produk di temukan<span>{{ $products->total() }}</span></p>
 									</div>
 									<div class="shop-selector">
 										<label>Sort By : </label>

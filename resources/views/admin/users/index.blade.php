@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
 
                     <div class="alert alert-info">
-                        Sample table page
+                        Halaman Tabel Akun
                     </div>
 
                     <div class="card">
@@ -29,7 +29,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
+                                        <th>Nama</th>
                                         <th>Email</th>
                                     </tr>
                                 </thead>

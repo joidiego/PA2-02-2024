@@ -116,7 +116,7 @@
             Anything you want
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2024<a href="https://adminlte.io">Simangunsong</a>.</strong> All rights reserved.
+        <strong> &copy; 2024<a href="https://adminlte.io">Simangunsong</a>.</strong> Souvenir BulbulTA
     </footer>
 </div>
 <!-- ./wrapper -->

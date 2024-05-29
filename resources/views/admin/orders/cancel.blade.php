@@ -10,19 +10,19 @@
                 </div>
                 <div class="card-body">
                 <form action="{{ route('admin.orders.cancel', $order) }}" method="POST">
-                    @csrf 
+                    @csrf
                     @method('put')
                     <div class="form-group">
                         <label for="cancellation_note">Cancellation Note</label>
                         <textarea name="cancellation_note" id="cancellation_note" cols="30" rows="4" class="form-control">{{ old('cancellation_note') }}</textarea>
                     </div>
                     <div class="form-footer pt-5 border-top">
-                        <button type="submit" class="btn btn-success">Cancel Order</button>
+                        <button type="submit" class="btn btn-success">Pesanan dibatalkan</button>
                         <a href="{{ url('admin/orders') }}" class="btn btn-dark">Kembali</a>
                     </div>
                     </form>
                 </div>
-            </div>  
+            </div>
         </div>
         <div class="col-lg-6">
             <div class="card card-default">
@@ -73,7 +73,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6">Order item not found!</td>
+                                    <td colspan="6">Pesanan tidak ditemukan</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -110,7 +110,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

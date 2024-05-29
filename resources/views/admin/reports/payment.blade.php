@@ -6,7 +6,7 @@
 			<div class="col-lg-12">
 				<div class="card card-default">
 					<div class="card-header card-header-border-bottom">
-						<h2>Payment Report</h2>
+						<h2>Laporan Pembayaran</h2>
 					</div>
 					<div class="card-body">
 						@include('admin.reports.filter')
@@ -22,7 +22,7 @@
 							</thead>
 							<tbody>
 								@forelse ($payments as $payment)
-									<tr>    
+									<tr>
 										<td>{{ $payment->code }}</td>
 										<td>{{ date('d M Y H:i:s', strtotime($payment->created_at)) }}</td>
 										<td>{{ $payment->status }}</td>
@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

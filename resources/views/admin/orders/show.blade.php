@@ -12,47 +12,47 @@
                 <h2 class="text-dark font-weight-medium">Order ID #{{ $order->code }}</h2>
                 <div class="btn-group float-right">
                     <button class="btn btn-sm btn-secondary">
-                        <i class="mdi mdi-content-save"></i> Save</button>
+                        <i class="mdi mdi-content-save"></i> Simpan</button>
                     <button class="btn btn-sm btn-secondary">
                         <i class="mdi mdi-printer"></i> Print</button>
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">       
+              <div class="card-body">
                 <div class="row pt-2 mb-3">
                     <div class="col-lg-4">
-                        <p class="text-dark" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Billing Address</p>
+                        <p class="text-dark" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Tagihan</p>
                         <address>
                             {{ $order->customer_full_name }}
                              {{ $order->customer_address1 }}
                              {{ $order->customer_address2 }}
                             <br> Email: {{ $order->customer_email }}
-                            <br> Phone: {{ $order->customer_phone }}
-                            <br> Postcode: {{ $order->customer_postcode }}
+                            <br> Telepon: {{ $order->customer_phone }}
+                            <br> Kode Post: {{ $order->customer_postcode }}
                         </address>
                     </div>
                     <div class="col-lg-4">
-                        <p class="text-dark" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Shipment Address</p>
+                        <p class="text-dark" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Pengiriman</p>
                         <address>
                             {{ $order->shipment->first_name }} {{ $order->shipment->last_name }}
                                 {{ $order->shipment->address1 }}
                                 {{ $order->shipment->address2 }}
                             <br> Email: {{ $order->shipment->email }}
-                            <br> Phone: {{ $order->shipment->phone }}
-                            <br> Postcode: {{ $order->shipment->postcode }}
+                            <br> Telepon: {{ $order->shipment->phone }}
+                            <br> Kode Post: {{ $order->shipment->postcode }}
                         </address>
                     </div>
                     <div class="col-lg-4">
-                        <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Details</p>
+                        <p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Detail</p>
                         <address>
                             ID: <span class="text-dark">#{{ $order->code }}</span>
                             <br> {{ $order->order_date }}
                             <br> Status: {{ $order->status }} {{ $order->isCancelled() ? '('. $order->cancelled_at .')' : null}}
                             @if ($order->isCancelled())
-                                <br> Cancellation Note : {{ $order->cancellation_note}}
+                                <br> Catatan Pembatalan : {{ $order->cancellation_note}}
                             @endif
-                            <br> Payment Status: {{ $order->payment_status }}
-                            <br> Shipped by: {{ $order->shipping_service_name }}
+                            <br> Status Pembayaran: {{ $order->payment_status }}
+                            <br> Di Kirim oleh : {{ $order->shipping_service_name }}
                         </address>
                     </div>
                 </div>
@@ -62,14 +62,14 @@
                             <tr>
                                 <th>#</th>
                                 <th>Item</th>
-                                <th>Description</th>
+                                <th>Deskripsi</th>
                                 <th>Quantity</th>
                                 <th>Unit Cost</th>
                                 <th>Total</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @php 
+                            @php
                                 function showAttributes($jsonAttributes)
                                 {
                                     $jsonAttr = (string) $jsonAttributes;
@@ -102,7 +102,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6">Order item not found!</td>
+                                    <td colspan="6">Pesanan tidak ditemukan</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -116,7 +116,7 @@
                                 <li class="mid pb-3 text-dark">Tax(10%)
                                     <span class="d-inline-block float-right text-default">Rp{{ number_format($order->tax_amount,0,",",".") }}</span>
                                 </li>
-                                <li class="mid pb-3 text-dark">Shipping Cost
+                                <li class="mid pb-3 text-dark">Biaya Pengiriman
                                     <span class="d-inline-block float-right text-default">Rp{{ number_format($order->shipping_cost,0,",",".") }}</span>
                                 </li>
                                 <li class="pb-3 text-dark">Total
@@ -125,35 +125,35 @@
                             </ul>
                             @if (!$order->trashed())
                                     @if ($order->isPaid() && $order->isConfirmed())
-                                        <a href="{{ url('admin/shipments/'. $order->shipment->id .'/edit')}}" class="btn btn-block mt-2 btn-lg btn-primary btn-pill"> Procced to Shipment</a>
+                                        <a href="{{ url('admin/shipments/'. $order->shipment->id .'/edit')}}" class="btn btn-block mt-2 btn-lg btn-primary btn-pill">Proses Pengiriman</a>
                                     @endif
 
                                     @if (in_array($order->status, [\App\Models\Order::CREATED, \App\Models\Order::CONFIRMED]))
-                                        <a href="{{ url('admin/orders/'. $order->id .'/cancel')}}" class="btn btn-block mt-2 btn-lg btn-warning btn-pill"> Cancel</a>
+                                        <a href="{{ url('admin/orders/'. $order->id .'/cancel')}}" class="btn btn-block mt-2 btn-lg btn-warning btn-pill"> Batalkan</a>
                                     @endif
 
                                     @if ($order->isDelivered())
                                         <a href="#" class="btn btn-block mt-2 btn-lg btn-success btn-pill" onclick="event.preventDefault();
-                                        document.getElementById('complete-form-{{ $order->id }}').submit();"> Mark as Completed</a>		
+                                        document.getElementById('complete-form-{{ $order->id }}').submit();"> Penanda Sebagai Selesai</a>
                                         <form class="d-none" method="POST" action="{{ route('admin.orders.complete', $order) }}" id="complete-form-{{ $order->id }}">
                                             @csrf
-                                        </form>				
+                                        </form>
                                     @endif
 
                                     @if (!in_array($order->status, [\App\Models\Order::DELIVERED, \App\Models\Order::COMPLETED]))
-                                        <a href="#" class="btn btn-block mt-2 btn-lg btn-secondary btn-pill delete" order-id="{{ $order->id }}"> Remove</a>	
+                                        <a href="#" class="btn btn-block mt-2 btn-lg btn-secondary btn-pill delete" order-id="{{ $order->id }}"> Hapus</a>
                                         <form action="{{ route('admin.orders.destroy',$order) }}" method="post" id="delete-form-{{ $order->id }}" class="d-none">
-                                            @csrf 
+                                            @csrf
                                             @method('delete')
-                                        </form>	
+                                        </form>
                                     @endif
                                 @else
-                                    <a href="{{ url('admin/orders/restore/'. $order->id)}}" class="btn btn-block mt-2 btn-lg btn-outline-secondary btn-pill restore">Restore</a>
-                                    <a href="#" class="btn btn-block mt-2 btn-lg btn-danger btn-pill delete" order-id="{{ $order->id }}"> Remove Permanently</a>
+                                    <a href="{{ url('admin/orders/restore/'. $order->id)}}" class="btn btn-block mt-2 btn-lg btn-outline-secondary btn-pill restore">Memulihkan</a>
+                                    <a href="#" class="btn btn-block mt-2 btn-lg btn-danger btn-pill delete" order-id="{{ $order->id }}"> Hapus Selamanya</a>
                                     <form action="{{ route('admin.orders.destroy',$order) }}" method="post" id="delete-form-{{ $order->id }}" class="d-none">
-                                            @csrf 
+                                            @csrf
                                             @method('delete')
-                                        </form>	
+                                        </form>
                                 @endif
                             </div>
                         </div>
@@ -177,7 +177,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
@@ -187,7 +187,7 @@
     <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
     <script>
     $("#data-table").DataTable();
-	
+
     $(".delete").on("submit", function () {
         return confirm("Do you want to remove this?");
     });
@@ -198,10 +198,10 @@
             document.getElementById('delete-form-' + orderId ).submit();
         }
     });
-    
+
     $(".restore").on("click", function () {
         return confirm("Do you want to restore this?");
     });
-		
+
     </script>
 @endpush

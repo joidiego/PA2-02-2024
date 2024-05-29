@@ -4,10 +4,10 @@
 	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>My Order</h2>
+				<h2>Pesanan Saya</h2>
 				<ul>
-					<li><a href="{{ url('/') }}">home</a></li>
-					<li>my order</li>
+					<li><a href="{{ url('/') }}">Home</a></li>
+					<li>Pesanan Saya</li>
 				</ul>
 			</div>
 		</div>
@@ -24,15 +24,15 @@
 							<table class="table table-bordered table-striped">
 								<thead>
 									<th>Order ID</th>
-									<th>Grand Total</th>
+									<th>Total</th>
 									<th>Nomer Resi</th>
 									<th>Status</th>
-									<th>Payment</th>
+									<th>Pembayaran</th>
 									<th>Action</th>
 								</thead>
 								<tbody>
 									@forelse($orders as $order)
-										<tr>    
+										<tr>
 											<td>
 												{{ $order->code }}<br>
 												<span style="font-size: 12px; font-weight: normal"> {{ date('d M Y', strtotime($order->order_date)) }}</span>
@@ -42,12 +42,12 @@
 											<td>{{ $order->status }}</td>
 											<td>{{ $order->payment_status }}</td>
 											<td>
-												<a href="{{ url('orders/'. $order->id) }}" class="btn btn-info btn-sm">details</a>
+												<a href="{{ url('orders/'. $order->id) }}" class="btn btn-info btn-sm">detail</a>
 											</td>
 										</tr>
 									@empty
 										<tr>
-											<td colspan="5">No records found</td>
+											<td colspan="5">Tidak ada catatan yang ditemukan</td>
 										</tr>
 									@endforelse
 								</tbody>

@@ -11,13 +11,13 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Data Order</h3>
-                <a href="{{ route('admin.orders.trashed')}}" class="btn btn-danger shadow-sm float-right"> <i class="fa fa-trash"></i> Trash </a>
+                <a href="{{ route('admin.orders.trashed')}}" class="btn btn-danger shadow-sm float-right"> <i class="fa fa-trash"></i> Sampah Pesanan</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
               <form action="" class="input-daterange form-inline mb-4">
                 <div class="form-group mb-2">
-                  <input type="text" class="form-control input-block" name="q" value="{{ !empty(request()->input('q')) ? request()->input('q') : '' }}" placeholder="Type code or name"> 
+                  <input type="text" class="form-control input-block" name="q" value="{{ !empty(request()->input('q')) ? request()->input('q') : '' }}" placeholder="Type code or name">
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                   <input type="text" class="form-control datepicker" readonly="" value="{{ !empty(request()->input('start')) ? request()->input('start') : '' }}" name="start" placeholder="from">
@@ -48,7 +48,7 @@
                         </thead>
                         <tbody>
                             @forelse ($orders as $order)
-                                <tr>    
+                                <tr>
                                     <td>
                                         {{ $order->code }}<br>
                                         <span style="font-size: 12px; font-weight: normal"> {{ $order->order_date }}</span>
@@ -74,7 +74,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6">No records found</td>
+                                    <td colspan="6">Tidak ada catatan yang ditemukan</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -100,7 +100,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
 @endpush
 
-@push('script-alt') 
+@push('script-alt')
     <script
         src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
@@ -117,7 +117,7 @@
 			format: 'yyyy-mm-dd'
 		});
 		$(".delete").on("submit", function () {
-			return confirm("Do you want to remove this?");
+			return confirm("Apakah Anda ingin menghapus ini?");
 		});
 		$("a.delete").on("click", function () {
 			event.preventDefault();
@@ -127,7 +127,7 @@
 			}
 		});
 		$(".restore").on("click", function () {
-			return confirm("Do you want to restore this?");
+			return confirm("Apakah Anda ingin memulihkan ini?");
 		});
 	</script>
 @endpush

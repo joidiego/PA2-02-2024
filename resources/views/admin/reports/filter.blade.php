@@ -16,11 +16,11 @@
                     <option value="{{ $value }}">{{ $export }}</option>
                 @endforeach
             </select>
-        </div>   
+        </div>
     </div>
     <div class="col-lg-2">
         <div class="form-group mx-sm-3 mb-2">
-            <button type="submit" class="btn btn-success">Go</button>
+            <button type="submit" class="btn btn-success">Convert</button>
         </div>
     </div>
 </form>

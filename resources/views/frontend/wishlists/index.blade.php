@@ -27,7 +27,7 @@
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                            </div> 
+                            </div>
                         </div><!-- /.container-fluid -->
                     </div>
                 @endif
@@ -36,10 +36,10 @@
 							<table>
 								<thead>
 									<tr>
-										<th>remove</th>
-										<th>Image</th>
-										<th>Product</th>
-										<th>Price</th>
+										<th>Hapus</th>
+										<th>Gambar</th>
+										<th>Produk</th>
+										<th>Harga</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -52,7 +52,7 @@
 										<tr>
 											<td class="product-remove">
                                             <form action="{{ route('wishlists.destroy', $wishlist->id) }}" method="post" class="delete d-inline-block">
-                                                @csrf 
+                                                @csrf
                                                 @method('delete')
                                                 <button type="submit" style="background-color: transparent; border-color: #FFF;">X</button>
                                             </form>
@@ -65,7 +65,7 @@
 										</tr>
 									@empty
 										<tr>
-											<td colspan="4">You have no wishlist product</td>
+											<td colspan="4">You have no wishlist product Kamu tidak memiliki </td>
 										</tr>
 									@endforelse
                                 </tbody>

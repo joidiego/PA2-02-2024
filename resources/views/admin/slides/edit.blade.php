@@ -11,21 +11,21 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Edit Slide</h3>
-                <a href="{{ route('admin.slides.index')}}" class="btn btn-success shadow-sm float-right"> <i class="fa fa-arrow-left"></i> Kembali</a>
+                <a href="{{ route('admin.slides.index')}}" class="btn btn-success shadow-sm float-right"> <i class="fa fa-arrow-left"></i>Kembali</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <form method="post" action="{{ route('admin.slides.update', $slide) }}" enctype="multipart/form-data">
-                    @csrf 
+                    @csrf
                     @method('put')
                     <div class="form-group row border-bottom pb-4">
-                        <label for="title" class="col-sm-2 col-form-label">Title</label>
+                        <label for="title" class="col-sm-2 col-form-label">Judul Produk</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="title" value="{{ old('title', $slide->title) }}" id="title">
                         </div>
                     </div>
                     <div class="form-group row border-bottom pb-4">
-                        <label for="url" class="col-sm-2 col-form-label">Url</label>
+                        <label for="url" class="col-sm-2 col-form-label">Link Url</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="url" value="{{ old('url', $slide->url) }}" id="url">
                         </div>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="form-group row border-bottom pb-4">
-                        <label for="body" class="col-sm-2 col-form-label">Body</label>
+                        <label for="body" class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-10">
                             <textarea class="form-control" name="body" id="body" cols="30" rows=8>{{ old('body', $slide->body) }}</textarea>
                         </div>
@@ -52,7 +52,7 @@
                               </select>
                             </div>
                         </div>
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
                 </form>
               </div>
               <!-- /.card-body -->

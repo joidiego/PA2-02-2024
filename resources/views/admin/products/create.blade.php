@@ -16,7 +16,7 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <form method="post" action="{{ route('admin.products.store') }}">
-                    @csrf 
+                    @csrf
                     <div class="form-group row border-bottom pb-4">
                         <label for="type" class="col-sm-2 col-form-label">Tipe Kategori</label>
                         <div class="col-sm-10">
@@ -67,9 +67,9 @@
                               </div>
                           </div>
                         @endforeach
-                      @endif   
+                      @endif
                     </div>
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
                 </form>
               </div>
               <!-- /.card-body -->
@@ -101,7 +101,7 @@
       $('.select-multiple').select2();
       function showHideConfigurableAttributes() {
 			var productType = $(".product-type").val();
-				
+
 			if (productType == 'configurable') {
 				$(".configurable-attributes").show();
 			} else {
