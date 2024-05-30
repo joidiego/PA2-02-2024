@@ -170,12 +170,12 @@
 				</div>
 				<div class="col-lg-6 col-md-12 col-12">
 					<div class="your-order">
-						<h3>Your order</h3>
+						<h3>Pesanan Anda</h3>
 						<div class="your-order-table table-responsive">
 							<table>
 								<thead>
 									<tr>
-										<th class="product-name">Product</th>
+										<th class="product-name">Produk</th>
 										<th class="product-total">Total</th>
 									</tr>
 								</thead>
@@ -195,7 +195,7 @@
 										</tr>
 									@empty
 										<tr>
-											<td colspan="2">The cart is empty! </td>
+											<td colspan="2">Keranjang Kosong </td>
 										</tr>
 									@endforelse
 								</tbody>
@@ -209,13 +209,13 @@
 										<td><span class="amount">jnfjk</span></td>
 									</tr> -->
 									<tr class="cart-subtotal">
-										<th>Shipping Cost (100 kg)</th>
+										<th>Biaya pengiriman (100 kg)</th>
 										<td><select id="shipping-cost-option" required name="shipping_service">
 
 										</select></td>
 									</tr>
 									<tr class="order-total">
-										<th>Order Total</th>
+										<th>Total Pesanan</th>
 										<td><strong>Rp<span class="total-amount">{{ Cart::subtotal(0, ",", ".") }}</span></strong>
 										</td>
 									</tr>
@@ -231,17 +231,17 @@
 										</div>
 										<div id="payment-1" class="panel-collapse collapse show">
 											<div class="panel-body">
-												<p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+												<p>Lakukan pembayaran Anda langsung ke rekening bank kami. Silakan gunakan ID Pesanan Anda sebagai referensi pembayaran. Pesanan Anda tidak akan dikirim sampai dana telah masuk ke rekening kami.</p>
 											</div>
 										</div>
 									</div>
 									<div class="panel panel-default">
 										<div class="panel-heading">
-											<h5 class="panel-title"><a class="collapsed" data-toggle="collapse" aria-expanded="false" data-parent="#faq" href="#payment-2">Cheque Payment</a></h5>
+											<h5 class="panel-title"><a class="collapsed" data-toggle="collapse" aria-expanded="false" data-parent="#faq" href="#payment-2">Cek Pembayaran</a></h5>
 										</div>
 										<div id="payment-2" class="panel-collapse collapse">
 											<div class="panel-body">
-												<p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+												<p>Lakukan pembayaran Anda langsung ke rekening bank kami. Silakan gunakan ID Pesanan Anda sebagai referensi pembayaran. Pesanan Anda tidak akan dikirim sampai dana telah masuk ke rekening kami.</p>
 											</div>
 										</div>
 									</div>
@@ -251,7 +251,7 @@
 										</div>
 										<div id="payment-3" class="panel-collapse collapse">
 											<div class="panel-body">
-												<p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+												<p>Lakukan pembayaran Anda langsung ke rekening bank kami. Silakan gunakan ID Pesanan Anda sebagai referensi pembayaran. Pesanan Anda tidak akan dikirim sampai dana telah masuk ke rekening kami.</p>
 											</div>
 										</div>
 									</div>

@@ -1,13 +1,13 @@
 @extends('frontend.layout')
 
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/rumah.png') }})">
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>shop grid 3 column</h2>
+				<h2>Bulbul-TA</h2>
 				<ul>
 					<li><a href="#">home</a></li>
-					<li>shop grid 3 column</li>
+					<li>Produk Bulbul-TA</li>
 				</ul>
 			</div>
 		</div>
@@ -20,7 +20,7 @@
                     <div class="shop-sidebar mr-50">
                         <form method="GET" action="{{ url('products')}}">
                             <div class="sidebar-widget mb-40">
-                                <h3 class="sidebar-title">Filter by Price</h3>
+                                <h3 class="sidebar-title">Pilih berdasarkan Harga</h3>
                                 <div class="price_filter">
                                     <div id="slider-range"></div>
                                     <div class="price_slider_amount">
@@ -51,7 +51,7 @@
 
                         @if ($colors)
                             <div class="sidebar-widget sidebar-overflow mb-45">
-                                <h3 class="sidebar-title">color</h3>
+                                <h3 class="sidebar-title"></h3>
                                 <div class="sidebar-categories">
                                     <ul>
                                         @foreach ($colors as $color)
@@ -64,7 +64,7 @@
 
                         @if ($sizes)
                             <div class="sidebar-widget mb-40">
-                                <h3 class="sidebar-title">size</h3>
+                                <h3 class="sidebar-title"></h3>
                                 <div class="product-size">
                                     <ul>
                                         @foreach ($sizes as $size)
@@ -86,7 +86,7 @@
 										<p><span>{{ count($products) }}</span> Produk di temukan<span>{{ $products->total() }}</span></p>
 									</div>
 									<div class="shop-selector">
-										<label>Sort By : </label>
+										<label>urutan : </label>
                                         <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)" name="sort" id="">
                                             @foreach($sorts as $url => $sort)
                                                 <option {{ $selectedSort == $url ? 'selected' : null }} value="{{ $url }}">{{ $sort }}</option>
@@ -142,7 +142,7 @@
                                             </div>
                                             <!-- end -->
                                         @empty
-                                            No product found!
+                                            Produk tidak ditemukan!
                                         @endforelse
                                     </div>
                                 <!-- end -->
@@ -176,7 +176,7 @@
                                                     </div>
                                                     <div class="product-list-cart-wishlist">
                                                         <div class="product-list-cart">
-                                                            <a class="btn-hover list-btn-style add-to-card" href=""  product-id="{{ $product->id }}" product-type="{{ $product->type }}" product-slug="{{ $product->slug }}">add to cart</a>
+                                                            <a class="btn-hover list-btn-style add-to-card" href=""  product-id="{{ $product->id }}" product-type="{{ $product->type }}" product-slug="{{ $product->slug }}">tambahkan ke keranjang</a>
                                                         </div>
                                                         <div class="product-list-wishlist">
                                                             <a class="btn-hover list-btn-wishlist add-to-fav" title="Favorite"  product-slug="{{ $product->slug }}" href="">
@@ -188,7 +188,7 @@
                                             </div>
                                         </div>
                                         @empty
-                                            No product found!
+                                            Produk tidak ditemukan!
                                         @endforelse
                                     </div>
                                     <!-- end -->

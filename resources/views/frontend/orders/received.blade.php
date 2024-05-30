@@ -2,7 +2,7 @@
 
 @section('content')
 	<!-- header end -->
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/karya1.png') }})">
 		<div class="container">
 			<div class="breadcrumb-content text-center">
 				<h2>Pesanan Diterima</h2>
@@ -30,7 +30,7 @@
                         </div><!-- /.container-fluid -->
                     </div>
                 @endif
-					<h1 class="cart-heading">Your Order:</h4>
+					<h1 class="cart-heading">Pesanan Anda :</h4>
 					<div class="row">
 						<div class="col-xl-3 col-lg-4">
 							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Alamat Penagihan</p>
@@ -62,7 +62,7 @@
 								<br> {{ $order->order_date }}
 								<br> Status: {{ $order->status }}
 								<br> Status Pembayaran: {{ $order->payment_status }}
-								<br> Shipped by: {{ $order->shipping_service_name }}
+								<br> Di Kirim oleh :{{ $order->shipping_service_name }}
 							</address>
 						</div>
 					</div>
@@ -72,9 +72,9 @@
 								<tr>
 									<th>#</th>
 									<th>Item</th>
-									<th>Description</th>
+									<th>Deskripsi</th>
 									<th>Quantity</th>
-									<th>Unit Cost</th>
+									<th>Biaya</th>
 									<th>Total</th>
 								</tr>
 							</thead>
@@ -112,7 +112,7 @@
 									</tr>
 								@empty
 									<tr>
-										<td colspan="6">Order item not found!</td>
+										<td colspan="6">Barang Pesanan tidak di temukan</td>
 									</tr>
 								@endforelse
 							</tbody>
@@ -125,10 +125,10 @@
 									<li> Subtotal
 										<span>Rp{{ number_format($order->base_total_price, 0 ,",", ".") }}</span>
 									</li>
-									<li>Tax (10%)
+									<li>pajak (10%)
 										<span>Rp{{ number_format($order->tax_amount,0,",",".") }}</span>
 									</li>
-									<li>Shipping Cost
+									<li>Biaya pengiriman
 										<span>Rp{{ number_format($order->shipping_cost,0,",",".") }}</span>
 									</li>
 									<li>Total

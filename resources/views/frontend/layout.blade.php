@@ -50,11 +50,7 @@
                                     <li><a href="{{ url('products') }}">Produk</a>
 
                                     </li>
-                                   <li><a href="blog.html">Alamat</a>
-                                        <ul class="single-dropdown">
-                                            <li><a href="https://maps.app.goo.gl/y4NRB5zYcaFmAwAdA">klik Situs Alamat</a></li>
-                                            <!--<li><a href="">blog 2 colunm</a></li>-->
-                                        </ul>
+                                   <li><a href="https://maps.app.goo.gl/y4NRB5zYcaFmAwAdA">Alamat</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -170,7 +166,7 @@
                         </div>
                         <div class="furniture-search">
                         <form action="{{ url('products') }}" method="GET">
-                            <input placeholder="I am Searching for . . ." type="text" name="q" value="{{ isset($q) ? $q : null }}">
+                            <input placeholder="cari produk " type="text" name="q" value="{{ isset($q) ? $q : null }}">
                             <button>
                                 <i class="ti-search"></i>
                             </button>
@@ -207,7 +203,7 @@
                             <img src="{{ asset('themes/ezone/assets/img/icon-img/27.png') }}" alt="">
                         </div>
                         <div class="services-content">
-                            <h4>24/7 Support</h4>
+                            <h4>24/7 Siap Melayani</h4>
                             <p>Kami akan selalu melayani anda, jika anda kendala Hubungi admin</p>
                         </div>
                     </div>
@@ -226,76 +222,77 @@
         <!-- end -->
 
         <!-- footer -->
-        <footer class="footer-area">
-            <div class="footer-top-area pt-70 pb-35 wrapper-padding-5">
-                <div class="container-fluid">
-                    <div class="widget-wrapper">
-                        <div class="footer-widget mb-30">
-                            <a href="#"><img src="{{ asset('themes/ezone/assets/img/logo/2.png') }}" alt=""></a>
-                            <div class="footer-about-2">
-                                <p>Website Kami Memiliki Produk inovasi anak muda<br>Kami menciptakan Produk dengan alat dan bahan seadanya<br>Buruannnnn   beliii sebelummmm habisss!!!</p>
-                            </div>
+        <!-- footer -->
+    <footer class="footer-area">
+        <div class="footer-top-area pt-70 pb-35 wrapper-padding-5" style="background-image: url('{{ asset('themes/ezone/assets/img/bg/19.png') }}'); background-size: cover; background-position: center;">
+            <div class="container-fluid">
+                <div class="widget-wrapper">
+                    <div class="footer-widget mb-30">
+                        <a href="#"><img src="{{ asset('themes/ezone/assets/img/logo/2.png') }}" alt=""></a>
+                        <div class="footer-about-2">
+                            <p>Website Kami Memiliki Produk inovasi anak muda<br>Kami menciptakan Produk dengan alat dan bahan seadanya<br>Buruannnnn   beliii sebelummmm habisss!!!</p>
                         </div>
-                        <div class="footer-widget mb-30">
-                            <h3 class="footer-widget-title-5">Hubungi Kami </h3>
-                            <div class="footer-info-wrapper-3">
-                                <div class="footer-address-furniture">
-                                    <div class="footer-info-icon3">
-                                        <span>Alamat: Pantai Lumban Bulbul</span>
-                                    </div>
-                                    <div class="footer-info-content3">
-                                        <p>Kab.Toba Samosir Pantai Lumban Bulbuk<br>Bapak simangunsong</p>
-                                    </div>
+                    </div>
+                    <div class="footer-widget mb-30">
+                        <h3 class="footer-widget-title-5">Hubungi Kami </h3>
+                        <div class="footer-info-wrapper-3">
+                            <div class="footer-address-furniture">
+                                <div class="footer-info-icon3">
+                                    <span>Alamat: Pantai Lumban Bulbul</span>
                                 </div>
-                                <div class="footer-address-furniture">
-                                    <div class="footer-info-icon3">
-                                        <span>Telepon</span>
-                                    </div>
-                                    <div class="footer-info-content3">
-                                        <p>+ <br>+628 136 001 0609</p><br>
-                                    </div>
-                                </div>
-                                <div class="footer-address-furniture">
-                                    <div class="footer-info-icon3">
-                                        <span>E-mail: @ Sourvenir@gmail.com</span>
-                                    </div>
-                                    <div class="footer-info-content3">
-                                        <p><a href="#"> simangunsong@gmail.com</a> <br><a href="#"> simangunsongbulbul@mail.com</a></p>
-                                    </div>
+                                <div class="footer-info-content3">
+                                    <p>Kab.Toba Samosir Pantai Lumban Bulbuk<br>Bapak simangunsong</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="footer-widget mb-30">
-                            <h3 class="footer-widget-title-5"></h3>
-                            <div class="footer-newsletter-2">
-                                <p>Kirimkan email Anda atau pembaruan berikutnya kepada kami</p>
-                                <div id="mc_embed_signup" class="subscribe-form-5">
-                                    <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                        <div id="mc_embed_signup_scroll" class="mc-form">
-                                            <input type="email" value="" name="EMAIL" class="email" placeholder="Enter mail address">
-                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                            <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                        </div>
-                                    </form>
+                            <div class="footer-address-furniture">
+                                <div class="footer-info-icon3">
+                                    <span>Telepon</span>
                                 </div>
+                                <div class="footer-info-content3">
+                                    <p>+ <br>+628 136 001 0609</p><br>
+                                </div>
+                            </div>
+                            <div class="footer-address-furniture">
+                                <div class="footer-info-icon3">
+                                    <span>E-mail: @ Sourvenir@gmail.com</span>
+                                </div>
+                                <div class="footer-info-content3">
+                                    <p><a href="#"> simangunsong@gmail.com</a> <br><a href="#"> simangunsongbulbul@mail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-widget mb-30">
+                        <h3 class="footer-widget-title-5"></h3>
+                        <div class="footer-newsletter-2">
+                            <p>Kirimkan email Anda atau pembaruan berikutnya kepada kami</p>
+                            <div id="mc_embed_signup" class="subscribe-form-5">
+                                <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll" class="mc-form">
+                                        <input type="email" value="" name="EMAIL" class="email" placeholder="Enter mail address">
+                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom ptb-20 gray-bg-8">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <div class="copyright-furniture">
-                                <p>Horas <a href="https://www.itrip.id/pantai-bulbul-toba/">Bulbul-TA</a>Selamat Datang di Website Bulbul Creative-TA</p>
-                            </div>
+        </div>
+        <div class="footer-bottom ptb-20 gray-bg-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="copyright-furniture">
+                            <p>Horas <a href="https://www.itrip.id/pantai-bulbul-toba/">Bulbul-TA</a>Selamat Datang di Website Bulbul Creative-TA</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
         <!-- end -->
         <div id="loader" style="display: none;">
             <div id="loading" style="z-index:99999;position: fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.3);display: flex;justify-content:center;align-items: center;" class="mx-auto">

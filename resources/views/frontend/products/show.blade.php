@@ -4,10 +4,10 @@
 	<div class="breadcrumb-area pt-205 pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
 		<div class="container">
 			<div class="breadcrumb-content text-center">
-				<h2>product details</h2>
+				<h2>Detail Produk</h2>
 				<ul>
-					<li><a href="/">home</a></li>
-					<li> product details </li>
+					<li><a href="/">Home</a></li>
+					<li> Detail Produk </li>
 				</ul>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 										$i++
 									@endphp
 								@empty
-									No image found!
+									gambar tidak ditemukan!
 								@endforelse
 							</div>
 							<div class="product-details-small nav mt-12" role=tablist>
@@ -71,7 +71,7 @@
 										$i++
 									@endphp
 								@empty
-									No image found!
+									gambar tidak ditemukan!
 								@endforelse
 							</div>
 						</div>
@@ -113,7 +113,7 @@
 									<input type="number" name="qty" value="1" class="cart-plus-minus-box" min="1">
 								</div>
 								<div class="quickview-btn-cart">
-									<button type="submit" class="submit contact-btn btn-hover">add to cart</button>
+									<button type="submit" class="submit contact-btn btn-hover">Tambah ke keranjang</button>
 								</div>
 								<div class="quickview-btn-wishlist">
 									<a class="btn-hover" href="#"><i class="pe-7s-like"></i></a>
@@ -122,7 +122,7 @@
                         </form>
 						<div class="product-details-cati-tag mt-35">
 							<ul>
-								<li class="categories-title">Categories :</li>
+								<li class="categories-title">kategori :</li>
 								@foreach ($product->categories as $category)
 									<li><a href="{{ url('products/category/'. $category->slug ) }}">{{ $category->name }}</a></li>
 								@endforeach
@@ -140,7 +140,7 @@
 						</div>
 						<div class="product-share">
 							<ul>
-								<li class="categories-title">Share :</li>
+								<li class="categories-title">Bagikan :</li>
 								<li>
 									<a href="#">
 										<i class="icofont icofont-social-facebook"></i>
@@ -173,7 +173,7 @@
 			<div class="product-description-review text-center">
 				<div class="description-review-title nav" role=tablist>
 					<a class="active" href="#pro-dec" data-toggle="tab" role="tab" aria-selected="true">
-						Description
+						Deskripsi
 					</a>
 					<a href="#pro-review" data-toggle="tab" role="tab" aria-selected="false">
 						Reviews (0)
@@ -184,7 +184,7 @@
 						<p>{{ $product->description }} </p>
 					</div>
 					<div class="tab-pane fade" id="pro-review" role="tabpanel">
-						<a href="#">Be the first to write your review!</a>
+						<a href="#">Jadilah yang pertama menulis ulasan Anda!</a>
 					</div>
 				</div>
 			</div>

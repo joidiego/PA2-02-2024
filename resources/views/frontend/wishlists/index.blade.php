@@ -1,10 +1,10 @@
 @extends('frontend.layout')
 
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/background1.png') }})">
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>Wishlist Saya</h2>
+				<h2>Daftar belanja</h2>
 				<ul>
 					<li><a href="{{ url('/') }}">home</a></li>
 					<li>Wishlist</li>
@@ -65,7 +65,7 @@
 										</tr>
 									@empty
 										<tr>
-											<td colspan="4">You have no wishlist product Kamu tidak memiliki </td>
+											<td colspan="4">Kamu tidak memiliki daftar belanja</td>
 										</tr>
 									@endforelse
                                 </tbody>

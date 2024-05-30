@@ -2,8 +2,8 @@
 	<h3 class="sidebar-title">User Menu</h3>
 	<div class="sidebar-categories">
 		<ul>
-			<li><a href="{{ url('profile') }}">Profile</a></li>
-			<li><a href="{{ url('orders') }}">Orders</a></li>
+			<li><a href="{{ url('profile') }}">Profil</a></li>
+			<li><a href="{{ url('orders') }}">Pesanan</a></li>
 			<li><a href="{{ url('wishlists') }}">Wishlist</a></li>
 		</ul>
 	</div>
