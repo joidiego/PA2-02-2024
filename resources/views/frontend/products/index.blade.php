@@ -1,17 +1,98 @@
 @extends('frontend.layout')
 
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/rumah.png') }})">
-		<div class="container-fluid">
-			<div class="breadcrumb-content text-center">
-				<h2>Bulbul-TA</h2>
-				<ul>
-					<li><a href="#">home</a></li>
-					<li>Produk Bulbul-TA</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulbul-TA</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="breadcrumb-area pt-205 breadcrumb-padding pb-150" style="background-image: url('{{ asset('themes/ezone/assets/img/bg/slider.png') }}');">
+        <div class="container-fluid">
+            <div class="breadcrumb-content text-center">
+                <h2 class="breadcrumb-title">Bulbul-TA</h2>
+                <ul class="breadcrumb-list">
+                    <li><a href="#">home</a></li>
+                    <li>Produk Bulbul-TA</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Apply styles using JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            const breadcrumbArea = document.querySelector('.breadcrumb-area');
+            const breadcrumbTitle = document.querySelector('.breadcrumb-title');
+            const breadcrumbList = document.querySelector('.breadcrumb-list');
+            const breadcrumbLinks = document.querySelectorAll('.breadcrumb-list li a');
+
+            // Styles for breadcrumb area
+            breadcrumbArea.style.backgroundSize = 'cover';
+            breadcrumbArea.style.backgroundPosition = 'center';
+            breadcrumbArea.style.backgroundRepeat = 'no-repeat';
+            breadcrumbArea.style.width = '100%';
+            breadcrumbArea.style.height = '50vh';
+            breadcrumbArea.style.margin = '0';
+            breadcrumbArea.style.padding = '0';
+            breadcrumbArea.style.display = 'flex';
+            breadcrumbArea.style.alignItems = 'center';
+            breadcrumbArea.style.justifyContent = 'center';
+
+            // Styles for breadcrumb content
+            document.querySelector('.breadcrumb-content').style.color = '#fff';
+
+            // Styles for breadcrumb title
+            breadcrumbTitle.style.fontFamily = "'Lobster', cursive";
+            breadcrumbTitle.style.fontSize = '4rem';
+            breadcrumbTitle.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.5)';
+            breadcrumbTitle.style.marginBottom = '20px';
+
+            // Styles for breadcrumb list
+            breadcrumbList.style.listStyle = 'none';
+            breadcrumbList.style.padding = '0';
+            breadcrumbList.style.fontFamily = "'Roboto', sans-serif";
+            breadcrumbList.style.fontSize = '1.5rem';
+            breadcrumbList.style.display = 'flex';
+            breadcrumbList.style.justifyContent = 'center';
+            breadcrumbList.style.gap = '15px';
+
+            // Styles for breadcrumb list items and links
+            breadcrumbLinks.forEach(link => {
+                link.style.color = '#fff';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.transition = 'color 0.3s';
+
+                link.addEventListener('mouseover', function () {
+                    link.style.color = '#ffeb3b';
+                });
+
+                link.addEventListener('mouseout', function () {
+                    link.style.color = '#fff';
+                });
+            });
+
+            // Add slashes between breadcrumb list items
+            const breadcrumbItems = document.querySelectorAll('.breadcrumb-list li');
+            breadcrumbItems.forEach((item, index) => {
+                if (index < breadcrumbItems.length - 1) {
+                    const slash = document.createElement('span');
+                    slash.textContent = '/';
+                    slash.style.color = '#fff';
+                    slash.style.marginLeft = '10px';
+                    item.appendChild(slash);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
 	<div class="shop-page-wrapper shop-page-padding ptb-100">
 		<div class="container-fluid">
 			<div class="row">
@@ -203,4 +284,6 @@
 			</div>
 		</div>
 	</div>
+
 @endsection
+

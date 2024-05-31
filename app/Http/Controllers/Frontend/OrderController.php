@@ -228,12 +228,11 @@ class OrderController extends Controller
             'first_name' => $params['first_name'],
             'last_name' => $params['last_name'],
             'address1' => $params['address1'],
-            'address2' => $params['address2'],
             'province_id' => $params['province_id'],
             'city_id' => $params['shipping_city_id'],
             'postcode' => $params['postcode'],
             'phone' => $params['phone'],
-            'email' => $params['email'],
+
         ];
 
         auth()->user()->update($user_profile);
@@ -256,9 +255,8 @@ class OrderController extends Controller
             'customer_first_name' => $params['first_name'],
             'customer_last_name' => $params['last_name'],
             'customer_address1' => $params['address1'],
-            'customer_address2' => $params['address2'],
+
             'customer_phone' => $params['phone'],
-            'customer_email' => $params['email'],
             'customer_city_id' => $params['shipping_city_id'],
             'customer_province_id' => $params['province_id'],
             'customer_postcode' => $params['postcode'],
@@ -350,9 +348,9 @@ class OrderController extends Controller
         $shippingFirstName = isset($params['ship_to']) ? $params['shipping_first_name'] : $params['first_name'];
         $shippingLastName = isset($params['ship_to']) ? $params['shipping_last_name'] : $params['last_name'];
         $shippingAddress1 = isset($params['ship_to']) ? $params['shipping_address1'] : $params['address1'];
-        $shippingAddress2 = isset($params['ship_to']) ? $params['shipping_address2'] : $params['address2'];
+
         $shippingPhone = isset($params['ship_to']) ? $params['shipping_phone'] : $params['phone'];
-        $shippingEmail = isset($params['ship_to']) ? $params['shipping_email'] : $params['email'];
+
         $shippingCityId = isset($params['ship_to']) ? $params['shipping_city_id'] : $params['shipping_city_id'];
         $shippingProvinceId = isset($params['ship_to']) ? $params['shipping_province_id'] : $params['province_id'];
         $shippingPostcode = isset($params['ship_to']) ? $params['shipping_postcode'] : $params['postcode'];
@@ -370,9 +368,9 @@ class OrderController extends Controller
             'first_name' => $shippingFirstName,
             'last_name' => $shippingLastName,
             'address1' => $shippingAddress1,
-            'address2' => $shippingAddress2,
+
             'phone' => $shippingPhone,
-            'email' => $shippingEmail,
+
             'city_id' => $shippingCityId,
             'province_id' => $shippingProvinceId,
             'postcode' => $shippingPostcode,

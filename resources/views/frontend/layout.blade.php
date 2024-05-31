@@ -100,42 +100,6 @@
                         <div class="mobile-menu-area d-md-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
                             <div class="mobile-menu">
                                 <nav id="mobile-menu-active">
-                                    <ul class="menu-overflow">
-                                        <li><a href="#">Rumah Kita</a>
-                                            <ul>
-                                                <li><a href="index.html">Fashion</a></li>
-
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages</a>
-                                            <ul>
-                                                <li><a href="about-us.html">about us</a></li>
-                                                <li><a href="menu-list.html">menu list</a></li>
-                                                <li><a href="login.html">login</a></li>
-                                                <li><a href="register.html">register</a></li>
-                                                <li><a href="cart.html">cart page</a></li>
-                                                <li><a href="checkout.html">checkout</a></li>
-                                                <li><a href="wishlist.html">wishlist</a></li>
-                                                <li><a href="contact.html">contact</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">shop</a>
-                                            <ul>
-                                                <li><a href="shop-grid-2-col.html"> grid 2 column</a></li>
-                                                <li><a href="shop-grid-3-col.html"> grid 3 column</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">BLOG</a>
-                                            <ul>
-                                                <li><a href="blog.html">blog 3 colunm</a></li>
-                                                <li><a href="blog-2-col.html">blog 2 colunm</a></li>
-                                                <li><a href="blog-sidebar.html">blog sidebar</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
-                                                <li><a href="blog-details-sidebar.html">blog details 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html"> Contact  </a></li>
-                                    </ul>
                                 </nav>
                             </div>
                         </div>
@@ -194,8 +158,8 @@
                             <img src="{{ asset('themes/ezone/assets/img/icon-img/26.png') }}" alt="">
                         </div>
                         <div class="services-content">
-                            <h4>GRATIS PENGIRIMAN</h4>
-                            <p>Pengiriman di lakukan secara event, Buruan order sekarang</p>
+                            <h4>Kualitas Terbaik</h4>
+                            <p>Produk kami memiliki Kualitas Terbaik</p>
                         </div>
                     </div>
                     <div class="single-services mb-40">
@@ -429,6 +393,7 @@
                                                     <div class="login-toggle-btn">
                                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                                         <label for="remember">{{ __('Remember Me') }}</label>
+                                                        <li><a href="{{ url('register') }}">Register Disini</a></li>
                                                         <a href="{{ route('password.request') }}">{{ __('Forgot Password?') }}</a>
                                                     </div>
                                                     <button type="submit" class="default-btn floatright">Login</button>

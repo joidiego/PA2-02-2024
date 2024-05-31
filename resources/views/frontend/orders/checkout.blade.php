@@ -2,17 +2,98 @@
 
 @section('content')
 	<!-- header end -->
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
-		<div class="container">
-			<div class="breadcrumb-content text-center">
-				<h2>Checkout Page</h2>
-				<ul>
-					<li><a href="{{ url('/') }}">home</a></li>
-					<li> halaman Checkout</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pembayaran</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url('{{ asset('themes/ezone/assets/img/bg/slider.png') }}');">
+        <div class="container-fluid">
+            <div class="breadcrumb-content text-center">
+                <h2 class="breadcrumb-title">Halaman Pembayaran </h2>
+                <ul class="breadcrumb-list">
+                    <li><a href="#">home</a></li>
+                    <li>Pembayaran</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Apply styles using JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            const breadcrumbArea = document.querySelector('.breadcrumb-area');
+            const breadcrumbTitle = document.querySelector('.breadcrumb-title');
+            const breadcrumbList = document.querySelector('.breadcrumb-list');
+            const breadcrumbLinks = document.querySelectorAll('.breadcrumb-list li a');
+
+            // Styles for breadcrumb area
+            breadcrumbArea.style.backgroundSize = 'cover';
+            breadcrumbArea.style.backgroundPosition = 'center';
+            breadcrumbArea.style.backgroundRepeat = 'no-repeat';
+            breadcrumbArea.style.width = '100%';
+            breadcrumbArea.style.height = '50vh';
+            breadcrumbArea.style.margin = '0';
+            breadcrumbArea.style.padding = '0';
+            breadcrumbArea.style.display = 'flex';
+            breadcrumbArea.style.alignItems = 'center';
+            breadcrumbArea.style.justifyContent = 'center';
+
+            // Styles for breadcrumb content
+            document.querySelector('.breadcrumb-content').style.color = '#fff';
+
+            // Styles for breadcrumb title
+            breadcrumbTitle.style.fontFamily = "'Lobster', cursive";
+            breadcrumbTitle.style.fontSize = '4rem';
+            breadcrumbTitle.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.5)';
+            breadcrumbTitle.style.marginBottom = '20px';
+
+            // Styles for breadcrumb list
+            breadcrumbList.style.listStyle = 'none';
+            breadcrumbList.style.padding = '0';
+            breadcrumbList.style.fontFamily = "'Roboto', sans-serif";
+            breadcrumbList.style.fontSize = '1.5rem';
+            breadcrumbList.style.display = 'flex';
+            breadcrumbList.style.justifyContent = 'center';
+            breadcrumbList.style.gap = '15px';
+
+            // Styles for breadcrumb list items and links
+            breadcrumbLinks.forEach(link => {
+                link.style.color = '#fff';
+                link.style.textDecoration = 'none';
+                link.style.padding = '5px 10px';
+                link.style.transition = 'color 0.3s';
+
+                link.addEventListener('mouseover', function () {
+                    link.style.color = '#ffeb3b';
+                });
+
+                link.addEventListener('mouseout', function () {
+                    link.style.color = '#fff';
+                });
+            });
+
+            // Add slashes between breadcrumb list items
+            const breadcrumbItems = document.querySelectorAll('.breadcrumb-list li');
+            breadcrumbItems.forEach((item, index) => {
+                if (index < breadcrumbItems.length - 1) {
+                    const slash = document.createElement('span');
+                    slash.textContent = '/';
+                    slash.style.color = '#fff';
+                    slash.style.marginLeft = '10px';
+                    item.appendChild(slash);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
 	<!-- checkout-area start -->
 	<div class="checkout-area ptb-100">
 		<div class="container">
@@ -21,7 +102,7 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-12 col-12">
 					<div class="checkbox-form">
-						<h3>Billing Details</h3>
+						<h3>Detail Penagihan</h3>
 						<div class="row">
 							<div class="col-6">
 								<div class="checkout-form-list">
@@ -37,13 +118,8 @@
 							</div>
 							<div class="col-md-12">
 								<div class="checkout-form-list">
-									<label>Address <span class="required">*</span></label>
+									<label>Alamat <span class="required">*</span></label>
 									<input type="text" name="address1" value="{{ old('address1', auth()->user()->address1) }}">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="checkout-form-list">
-                                	<input type="text" name="address2" value="{{ old('address2', auth()->user()->address2) }}">
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -82,12 +158,6 @@
 									<input type="text" name="phone" value="{{ old('phone', auth()->user()->phone) }}">
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="checkout-form-list">
-									<label>Email Address </label>
-									<input type="text" name="email" value="{{ old('email', auth()->user()->email) }}">
-								</div>
-							</div>
 						</div>
 						<div class="different-address">
 							<div class="ship-different-title">
@@ -112,13 +182,8 @@
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">
-											<label>Address <span class="required">*</span></label>
+											<label>Alamat <span class="required">*</span></label>
 											<input type="text" name="customer_address1" value="{{ old('address1') }}">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="checkout-form-list">
-                                        <input type="text" name="customer_address2" value="{{ old('address2') }}">
 										</div>
 									</div>
 									<div class="col-md-12">
@@ -141,27 +206,22 @@
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
-											<label>Postcode / Zip <span class="required">*</span></label>
+											<label>Kode Pos <span class="required">*</span></label>
 											<input type="text" name="customer_postcode" value="{{ old('postcode') }}">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
-											<label>Phone<span class="required">*</span></label>
+											<label>Telepon<span class="required">*</span></label>
 											<input type="text" name="customer_phone" value="{{ old('customer_phone') }}">
 										</div>
 									</div>
-									<div class="col-md-6">
-										<div class="checkout-form-list">
-											<label>Email </label>
-											<input type="text" name="customer_email" value="{{ old('customer_email') }}">
-										</div>
-									</div>
+
 								</div>
 							</div>
 							<div class="order-notes">
 								<div class="checkout-form-list mrg-nn">
-									<label>Order Notes</label>
+									<label>Catatan Pesanan</label>
 									<input type="text" name="note" value="{{ old('note') }}">
 								</div>
 							</div>
@@ -227,7 +287,7 @@
 								<div class="panel-group" id="faq">
 									<div class="panel panel-default">
 										<div class="panel-heading">
-											<h5 class="panel-title"><a data-toggle="collapse" aria-expanded="true" data-parent="#faq" href="#payment-1">Direct Bank Transfer.</a></h5>
+											<h5 class="panel-title"><a data-toggle="collapse" aria-expanded="true" data-parent="#faq" href="#payment-1">Transfer. Bank l</a></h5>
 										</div>
 										<div id="payment-1" class="panel-collapse collapse show">
 											<div class="panel-body">
@@ -257,7 +317,7 @@
 									</div>
 								</div>
 								<div class="order-button-payment">
-									<input type="submit" value="Place order" />
+									<input type="submit" value="Bayar" />
 								</div>
 							</div>
 						</div>

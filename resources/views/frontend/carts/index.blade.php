@@ -2,17 +2,90 @@
 
 @section('content')
 	<!-- header end -->
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/karya1.png') }})">
-		<div class="container">
-			<div class="breadcrumb-content text-center">
-				<h2>Halaman Keranjang</h2>
-				<ul>
-					<li><a href="{{ url('/') }}">Home</a></li>
-					<li> Halaman Keranjang</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Keranjang</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        .breadcrumb-area {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 50vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .breadcrumb-content {
+            color: #fff; /* White color for better contrast */
+        }
+
+        .breadcrumb-title {
+            font-family: 'Lobster', cursive; /* Fancy font for the title */
+            font-size: 4rem; /* Larger font size */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for depth */
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb-list {
+            list-style: none; /* Remove default list styling */
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Clean font for the list */
+            font-size: 1.5rem; /* Adjust font size */
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between list items */
+        }
+
+        .breadcrumb-list li {
+            position: relative;
+        }
+
+        .breadcrumb-list li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb-list li a:hover {
+            color: #ffeb3b; /* Hover color for links */
+        }
+
+        .breadcrumb-list li::after {
+            content: '/';
+            color: #fff;
+            margin-left: 10px;
+        }
+
+        .breadcrumb-list li:last-child::after {
+            content: ''; /* Remove slash after last item */
+        }
+    </style>
+</head>
+<body>
+    <div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/slide.png') }});">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2 class="breadcrumb-title">Halaman Keranjang</h2>
+                <ul class="breadcrumb-list">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li> Halaman Keranjang</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 	<!-- shopping-cart-area start -->
 	<div class="cart-main-area pt-95 pb-100">
 		<div class="container">

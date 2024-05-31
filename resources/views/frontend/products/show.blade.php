@@ -128,41 +128,6 @@
 								@endforeach
 							</ul>
 						</div>
-						<div class="product-details-cati-tag mtb-10">
-							<ul>
-								<li class="categories-title">Tags :</li>
-								<li><a href="#">fashion</a></li>
-								<li><a href="#">electronics</a></li>
-								<li><a href="#">toys</a></li>
-								<li><a href="#">food</a></li>
-								<li><a href="#">jewellery</a></li>
-							</ul>
-						</div>
-						<div class="product-share">
-							<ul>
-								<li class="categories-title">Bagikan :</li>
-								<li>
-									<a href="#">
-										<i class="icofont icofont-social-facebook"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="icofont icofont-social-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="icofont icofont-social-pinterest"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="icofont icofont-social-flikr"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -176,7 +141,6 @@
 						Deskripsi
 					</a>
 					<a href="#pro-review" data-toggle="tab" role="tab" aria-selected="false">
-						Reviews (0)
 					</a>
 				</div>
 				<div class="description-review-text tab-content">

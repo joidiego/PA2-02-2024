@@ -43,7 +43,7 @@
 									@if ($product->productImages->first())
 										<img src="{{ Storage::url($product->productImages->first()->path) }}" alt="{{ $product->name }}">
 									@else
-										<img src="{{ asset('themes/ezone/assets/img/product/fashion-colorful/1.jpg') }}" alt="{{ $product->name }}">
+										<img src="{{ asset('themes/ezone/assets/img/bg/slider.png') }}" alt="{{ $product->name }}">
 									@endif
 								</a>
 								<div class="product-action">

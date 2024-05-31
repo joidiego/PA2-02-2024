@@ -136,7 +136,7 @@
 									</li>
 								</ul>
 								@if (!$order->isPaid())
-									<a href="{{ $order->payment_url }}">Proceed to payment</a>
+									<a href="{{ $order->payment_url }}">Proses Pembayaran</a>
 								@endif
 							</div>
 						</div>
