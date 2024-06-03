@@ -15,7 +15,7 @@
                 <a href="{{ route('admin.dashboard') }}" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>
-                        {{ __('Dashboard') }}
+                        {{ __('Grafik Penjualan') }}
                     </p>
                 </a>
             </li>
