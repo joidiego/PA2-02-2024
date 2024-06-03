@@ -49,7 +49,7 @@
                                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                                 <label for="remember">{{ __('Remember Me') }}</label>
                                                 <li><a href="{{ url('register') }}">Register Disini</a></li>
-                                                <a href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
+                                                <a href="{{ route('password.request') }}">{{ __('') }}</a>
                                             </div>
                                             <button type="submit" class="default-btn floatright">Login</button>
                                         </div>

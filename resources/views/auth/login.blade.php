@@ -33,6 +33,13 @@
                     {{ $message }}
                 </span>
                 @enderror
+
+                <!-- Menampilkan notifikasi jika password salah -->
+                @if ($errors->has('email'))
+                    <span class="error invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
             </div>
 
             <div class="row">

@@ -28,7 +28,7 @@
 	<div class="popular-product-area wrapper-padding-3 pt-115 pb-115">
 		<div class="container-fluid">
 			<div class="section-title-6 text-center mb-50">
-				<h2>Produk Terlaris</h2>
+				<h2>Produk</h2>
 				<p>Selamat Datang di Website Bulbul Creative-TA</p>
 			</div>
 			<div class="product-style">

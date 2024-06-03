@@ -202,7 +202,7 @@
                         <div class="footer-info-wrapper-3">
                             <div class="footer-address-furniture">
                                 <div class="footer-info-icon3">
-                                    <span>Alamat: Pantai Lumban Bulbul</span>
+                                    <span>Alamat:</span>
                                 </div>
                                 <div class="footer-info-content3">
                                     <p>Kab.Toba Samosir Pantai Lumban Bulbuk<br>Bapak simangunsong</p>
@@ -213,12 +213,12 @@
                                     <span>Telepon</span>
                                 </div>
                                 <div class="footer-info-content3">
-                                    <p>+ <br>+628 136 001 0609</p><br>
+                                    <p>+628 136 001 0609</p><br>
                                 </div>
                             </div>
                             <div class="footer-address-furniture">
                                 <div class="footer-info-icon3">
-                                    <span>E-mail: @ Sourvenir@gmail.com</span>
+                                    <span>E-mail:</span>
                                 </div>
                                 <div class="footer-info-content3">
                                     <p><a href="#"> simangunsong@gmail.com</a> <br><a href="#"> simangunsongbulbul@mail.com</a></p>
